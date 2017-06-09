@@ -24,3 +24,15 @@ print(response)
 
 response = chatbot.get_response('How are you doing today?')
 print(response)
+
+print('Type something to begin...')
+
+while True:
+    try:
+        name = raw_input("your question : ")
+        response = bot.get_response(name)
+        print response
+
+    # Press ctrl-c or ctrl-d on the keyboard to exit
+    except (KeyboardInterrupt, EOFError, SystemExit):
+        break
